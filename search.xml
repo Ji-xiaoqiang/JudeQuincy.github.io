@@ -4,6 +4,9 @@
     <title><![CDATA[PLSQL]]></title>
     <url>%2F2019%2F05%2F02%2FPLSQL%2F</url>
     <content type="text"><![CDATA[1.PLSQL编程程序结构declare --声明变量、游标 I INTEGER; begin --执行语句 --[异常处理] end； 打印 BEGIN DBMS_OUTPUT.PUT.LINE(&#39;hello world&#39;); END； 需要的开输出 PL/SQL procedure successfully completed 1.常见的变量 普通的数据类型 （char,varchar2,date,numder,boolean,long) 特殊变量类型(引用型变量、记录型变量) 声明变量的方式为变量名 变量类型（变量长度） 例如 v_name carchar2(20); 2.普通变量的赋值1.直接赋值语句:= bi 比如 v_name :=&#39;zhangsan&#39;2.语句赋值，使用 select ...into ...赋值；（语法select 值 into 变量） 3.应用型变量变量的类型和长度取决于表中字段的类型和长度通过表明.列名%TYPE指定变量的类型和长度，列入v_name emp.ename%TYPE; 4. 记录型变量接收表中的一整行记录，相当于java中的一个对象语法：变量名称 表名%ROWTYPE, 例如v_emp emp%rowtype; 流程控制1. 条件分支语法 BEGIN IF 条件1 THEN 执行1 ELSIF 条件2 THEN 执行2 ELSE 执行3 END IF; END; 注意关键字 ELSIF 2. 循环语法 BEGIN LOPP EXIT WHEN 突出循环条件 END LOOP; END; 游标1.什么是游标 用于临时存储一个查询返回的多行数据（结果集，类似于Java的连接返回的ResultSet集合），通过遍历游标，可以逐行访问处理该结果集的数据。 游标的使用方法：声明–&gt;打开–&gt;读取–&gt;关闭2. 语法 游标的声明： CURSOR 游标名[(参数列表)] IS 查询语句； 游标的打开：OPEN 游标名； 游标的取值：FETCH 游标名 INTO 变量列表； 游标的关闭：CLOSE 游标名； 3. 游标的属性游标的属性============返回值类型========================说明%ROWCOUNT============ 整形 ==================获得FETCH语句返回的数据行%FOUND=============== 布尔型 =================最近的FETCH语句一行数据则真，否则为假%NOTFOUND=========== 布尔型 ================与%FOUND属性返回值相反%ISOPEN===============布尔型 =================游标已经打开时值为真，否则为假注意%NOTFOUND属性默认为FLASE,所以在循环中要注意判断条件的位置，如果先判断在FETCH会导致最后一个条记录的值会被打印两次（多循环一次默认）； 存储过程1.语法 CREATE OR REOLACE PROCEDURE 存储过程名[(参数列表)] IS BEGIN END[存储过程名]； 不带参数-带输入参数 带输入输出参数（返回值）的 带输出参数的存储过程CREATE OR REOLACE PROCEDURE 存储过程名[(参数列表)] IS BEGIN END[存储过程名]； 参数 –IN输入 –OUT输出]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
       <tags>
         <tag>PLSQL</tag>
         <tag>SQL</tag>
