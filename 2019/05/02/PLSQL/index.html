@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="hello">
 <meta property="og:description" content="1.PLSQL编程程序结构declare      --声明变量、游标      I INTEGER; begin    --执行语句    --[异常处理] end； 打印 BEGIN      DBMS_OUTPUT.PUT.LINE(&amp;#39;hello world&amp;#39;);  END； 需要的开输出 PL/SQL procedure successfully completed 1.常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T09:02:20.077Z">
+<meta property="og:updated_time" content="2019-05-07T14:51:24.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PLSQL">
 <meta name="twitter:description" content="1.PLSQL编程程序结构declare      --声明变量、游标      I INTEGER; begin    --执行语句    --[异常处理] end； 打印 BEGIN      DBMS_OUTPUT.PUT.LINE(&amp;#39;hello world&amp;#39;);  END； 需要的开输出 PL/SQL procedure successfully completed 1.常">
@@ -347,8 +347,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-02T17:02:20+08:00">
-                2019-05-02
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-07T22:51:24+08:00">
+                2019-05-07
               </time>
             
           </span>
@@ -472,7 +472,7 @@ END;
 </code></pre><p>注意关键字 <strong>ELSIF</strong></p>
 <h3 id="2-循环"><a href="#2-循环" class="headerlink" title="2. 循环"></a>2. 循环</h3><p>语法</p>
 <pre><code>BEGIN
-    LOPP
+    LOoP
         EXIT WHEN 突出循环条件
     END LOOP;
 END;
@@ -482,13 +482,45 @@ END;
 <li>游标的声明：<br> <code>CURSOR 游标名[(参数列表)] IS 查询语句；</code></li>
 <li>游标的打开：<br><code>OPEN 游标名；</code>   </li>
 <li>游标的取值：<br><code>FETCH 游标名 INTO 变量列表；</code></li>
-<li><p>游标的关闭：<br><code>CLOSE 游标名；</code></p>
-<h3 id="3-游标的属性"><a href="#3-游标的属性" class="headerlink" title="3. 游标的属性"></a>3. 游标的属性</h3><p>游标的属性============返回值类型========================说明<br>%ROWCOUNT============ 整形   ==================获得FETCH语句返回的数据行<br>%FOUND=============== 布尔型  =================最近的FETCH语句一行数据则真，否则为假<br>%NOTFOUND=========== 布尔型   ================与%FOUND属性返回值相反<br>%ISOPEN===============布尔型  =================游标已经打开时值为真，否则为假<br><strong>注意%NOTFOUND属性默认为FLASE,所以在循环中要注意判断条件的位置，如果先判断在FETCH会导致最后一个条记录的值会被打印两次（多循环一次默认）；</strong> </p>
-<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1.语法"></a>1.语法</h3><p> CREATE OR REOLACE PROCEDURE 存储过程名[(参数列表)] IS<br> BEGIN</p>
-<p> END[存储过程名]；         </p>
-</li>
+<li>游标的关闭：<br><code>CLOSE 游标名；</code><h3 id="3-游标的属性"><a href="#3-游标的属性" class="headerlink" title="3. 游标的属性"></a>3. 游标的属性</h3></li>
 </ol>
-<ul>
+<table>
+<thead>
+<tr>
+<th>游标的属性</th>
+<th style="text-align:right">返回值类型</th>
+<th style="text-align:center">说明    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%ROWCOUNT</td>
+<td style="text-align:right">整形</td>
+<td style="text-align:center">获得FETCH语句返回的数据行    </td>
+</tr>
+<tr>
+<td>%FOUND</td>
+<td style="text-align:right">布尔型</td>
+<td style="text-align:center">最近的FETCH语句一行数据则真，否则为假    </td>
+</tr>
+<tr>
+<td>%NOTFOUND</td>
+<td style="text-align:right">布尔型</td>
+<td style="text-align:center">与%FOUND属性返回值相反   </td>
+</tr>
+<tr>
+<td>%ISOPEN</td>
+<td style="text-align:right">布尔型</td>
+<td style="text-align:center">游标已经打开时值为真，否则为假   </td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意%NOTFOUND属性默认为FLASE,所以在循环中要注意判断条件的位置，如果先判断在FETCH会导致最后一个条记录的值会被打印两次（多循环一次默认）；</strong> </p>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1.语法"></a>1.语法</h3><pre><code>CREATE OR REOLACE PROCEDURE 存储过程名[(参数列表)] IS   
+BEGIN
+
+END[存储过程名]；         
+</code></pre><ul>
 <li>不带参数<br>-带输入参数</li>
 <li>带输入输出参数（返回值）的 </li>
 </ul>
@@ -538,6 +570,10 @@ END[存储过程名]；
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/07/oracle_stored_procedure/" rel="prev" title="Oracle 存储过程">
+                Oracle 存储过程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -616,7 +652,7 @@ END[存储过程名]；
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -638,7 +674,7 @@ END[存储过程名]；
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

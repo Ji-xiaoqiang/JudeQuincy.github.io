@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="PLSQL,SQL,">
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="存储过程创建语法：   create [or replace] procedure 存储过程名（param1 in type，param2 out type）as     变量1 类型（值范围）;     变量2 类型（值范围）; Begin     Select count(*) into 变量1 from 表A where列名=param1；  If (判断条件) then    Select">
+<meta name="keywords" content="PLSQL,SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/04/28/hello-world/index.html">
+<meta property="og:title" content="Oracle 存储过程">
+<meta property="og:url" content="http://yoursite.com/2019/05/07/oracle_stored_procedure/index.html">
 <meta property="og:site_name" content="hello">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="存储过程创建语法：   create [or replace] procedure 存储过程名（param1 in type，param2 out type）as     变量1 类型（值范围）;     变量2 类型（值范围）; Begin     Select count(*) into 变量1 from 表A where列名=param1；  If (判断条件) then    Select">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-27T16:28:15.434Z">
+<meta property="og:updated_time" content="2019-05-07T15:37:32.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Oracle 存储过程">
+<meta name="twitter:description" content="存储过程创建语法：   create [or replace] procedure 存储过程名（param1 in type，param2 out type）as     变量1 类型（值范围）;     变量2 类型（值范围）; Begin     Select count(*) into 变量1 from 表A where列名=param1；  If (判断条件) then    Select">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/28/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/07/oracle_stored_procedure/">
 
 
 
 
 
-  <title>Hello World | hello</title>
+  <title>Oracle 存储过程 | hello</title>
   
 
 
@@ -301,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/07/oracle_stored_procedure/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="笑笑强">
@@ -318,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Oracle 存储过程</h1>
         
 
         <div class="post-meta">
@@ -330,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-28T00:28:15+08:00">
-                2019-04-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T23:04:06+08:00">
+                2019-05-07
               </time>
             
 
@@ -346,12 +347,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-28T00:28:15+08:00">
-                2019-04-28
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-07T23:37:32+08:00">
+                2019-05-07
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -374,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  75
+                  1.3k
                 </span>
               
 
@@ -390,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  5
                 </span>
               
             </div>
@@ -411,20 +434,211 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="存储过程创建语法："><a href="#存储过程创建语法：" class="headerlink" title="存储过程创建语法："></a>存储过程创建语法：</h2><pre><code>   create [or replace] procedure 存储过程名（param1 in type，param2 out type）as
+    变量1 类型（值范围）;
+    变量2 类型（值范围）;
+Begin
+    Select count(*) into 变量1 from 表A where列名=param1；
 
+If (判断条件) then
+   Select 列名 into 变量2 from 表A where列名=param1；
+   Dbms_output。Put_line(‘打印信息’);
+Elsif (判断条件) then
+   Dbms_output。Put_line(‘打印信息’);
+Else
+   Raise 异常名（NO_DATA_FOUND）;
+End if;
+
+Exception
+When others then
+   Rollback;
+End;
+</code></pre><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><p><strong>1. 存储过程参数不带取值范围，in表示传入，out表示输出</strong><br><strong>2. 变量带取值范围，后面接分号</strong><br><strong>3. 在判断语句前最好先用count(*)函数判断是否存在该条操作记录</strong><br><strong>4. 用select … into … 给变量赋值</strong><br><strong>5. 在代码中抛异常用 raise+异常名</strong>  </p>
+<h2 id="已命名的异常"><a href="#已命名的异常" class="headerlink" title="已命名的异常:"></a>已命名的异常:</h2><table>
+<thead>
+<tr>
+<th>命名的系统异常</th>
+<th style="text-align:center">产生原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACCESS_INTO_NULL</td>
+<td style="text-align:center">未定义对象</td>
+</tr>
+<tr>
+<td>CASE_NOT_FOUND    CASE</td>
+<td style="text-align:center">中若未包含相应的 WHEN ，并且没有设置ELSE 时</td>
+</tr>
+<tr>
+<td>COLLECTION_IS_NULL</td>
+<td style="text-align:center">集合元素未初始化</td>
+</tr>
+<tr>
+<td>CURSER_ALREADY_OPEN</td>
+<td style="text-align:center">游标已经打开</td>
+</tr>
+<tr>
+<td>DUP_VAL_ON_INDEX</td>
+<td style="text-align:center">唯一索引对应的列上有重复的值</td>
+</tr>
+<tr>
+<td>INVALID_CURSOR</td>
+<td style="text-align:center">在不合法的游标上进行操作</td>
+</tr>
+<tr>
+<td>INVALID_NUMBER</td>
+<td style="text-align:center">内嵌的 SQL 语句不能将字符转换为数字</td>
+</tr>
+<tr>
+<td>NO_DATA_FOUND</td>
+<td style="text-align:center">使用 select into 未返回行，或应用索引表未初始化的</td>
+</tr>
+<tr>
+<td>TOO_MANY_ROWS</td>
+<td style="text-align:center">执行 select into 时，结果集超过一行</td>
+</tr>
+<tr>
+<td>ZERO_DIVIDE</td>
+<td style="text-align:center">除数为 0</td>
+</tr>
+<tr>
+<td>SUBSCRIPT_BEYOND_COUNT</td>
+<td style="text-align:center">元素下标超过嵌套表或 VARRAY 的最大值</td>
+</tr>
+<tr>
+<td>SUBSCRIPT_OUTSIDE_LIMIT</td>
+<td style="text-align:center">使用嵌套表或 VARRAY 时，将下标指定为负数</td>
+</tr>
+<tr>
+<td>VALUE_ERROR</td>
+<td style="text-align:center">赋值时，变量长度不足以容纳实际数据</td>
+</tr>
+<tr>
+<td>LOGIN_DENIED</td>
+<td style="text-align:center">PL/SQL 应用程序连接到 oracle 数据库时，提供了不正确的用户名或密码</td>
+</tr>
+<tr>
+<td>NOT_LOGGED_ON</td>
+<td style="text-align:center">PL/SQL 应用程序在没有连接 oralce 数据库的情况下访问数据</td>
+</tr>
+<tr>
+<td>PROGRAM_ERROR</td>
+<td style="text-align:center">PL/SQL 内部问题，可能需要重装数据字典＆ pl./SQL系统包</td>
+</tr>
+<tr>
+<td>ROWTYPE_MISMATCH</td>
+<td style="text-align:center">宿主游标变量与 PL/SQL 游标变量的返回类型不兼容</td>
+</tr>
+<tr>
+<td>SELF_IS_NULL</td>
+<td style="text-align:center">使用对象类型时，在 null 对象上调用对象方法</td>
+</tr>
+<tr>
+<td>STORAGE_ERROR</td>
+<td style="text-align:center">运行 PL/SQL 时，超出内存空间</td>
+</tr>
+<tr>
+<td>SYS_INVALID_ID</td>
+<td style="text-align:center">无效的 ROWID 字符串</td>
+</tr>
+<tr>
+<td>TIMEOUT_ON_RESOURCE</td>
+<td style="text-align:center">Oracle 在等待资源时超时</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="1-基本结构"><a href="#1-基本结构" class="headerlink" title="1. 基本结构"></a>1. 基本结构</h3><pre><code>        CREATE OR REPLACE PROCEDURE 存储过程名字
+        (
+            参数1 IN NUMBER,
+            参数2 IN NUMBER
+        ) IS
+        变量1 INTEGER :=0;
+        变量2 DATE;
+        BEGIN
+            --执行体
+        END 存储过程名字;
+</code></pre><h3 id="2-SELECT-INTO-STATEMENT"><a href="#2-SELECT-INTO-STATEMENT" class="headerlink" title="2. SELECT INTO STATEMENT"></a>2. SELECT INTO STATEMENT</h3><p><strong>将select查询的结果存入到变量中，可以同时将多个列存储多个变量中，必须有一条记录，否则抛出异常(如果没有记录抛出NO_DATA_FOUND)<br>例子：</strong>   </p>
+<pre><code>BEGIN
+    SELECT col1,col2 into 变量1,变量2 FROM  
+        typestruct where xxx;
+EXCEPTION
+     WHEN NO_DATA_FOUND THEN
+          xxxx;
+END;
+</code></pre><h3 id="3-IF-判断"><a href="#3-IF-判断" class="headerlink" title="3. IF 判断"></a>3. IF 判断</h3><pre><code>IF V_TEST=1 THEN
+BEGIN 
+   do something
+END;
+END IF;
+</code></pre><h3 id="4-while-循环"><a href="#4-while-循环" class="headerlink" title="4. while 循环"></a>4. while 循环</h3><pre><code>WHILE V_TEST=1 LOOP
+  BEGIN
+    XXXX
+  END;
+  END LOOP;
+</code></pre><h3 id="5-变量赋值"><a href="#5-变量赋值" class="headerlink" title="5. 变量赋值"></a>5. 变量赋值</h3><pre><code>V_TEST := 123;
+</code></pre><h3 id="6-用for-in-使用cursor"><a href="#6-用for-in-使用cursor" class="headerlink" title="6. 用for in 使用cursor"></a>6. 用for in 使用cursor</h3><pre><code>  IS
+  CURSOR cur IS SELECT * FROM xxx;
+  BEGIN
+ FOR cur_result in cur LOOP
+  BEGIN
+   V_SUM :=cur_result.列名1+cur_result.列名2
+  END;
+ END LOOP;
+  END;
+</code></pre><h3 id="7-带参数的cursor"><a href="#7-带参数的cursor" class="headerlink" title="7. 带参数的cursor"></a>7. 带参数的cursor</h3><pre><code>  CURSOR C_USER(C_ID NUMBER) IS SELECT NAME FROM USER WHERE TYPEID=C_ID;
+  OPEN C_USER(变量值);
+  LOOP
+ FETCH C_USER INTO V_NAME;
+ EXIT FETCH C_USER%NOTFOUND;
+    do something
+  END LOOP;
+  CLOSE C_USER;
+</code></pre><h3 id="8-用pl-sql-developer-debug"><a href="#8-用pl-sql-developer-debug" class="headerlink" title="8. 用pl/sql developer debug"></a>8. 用pl/sql developer debug</h3><p>连接数据库后建立一个Test WINDOW,在窗口输入调用SP的代码,F9开始debug,CTRL+N单步调试</p>
+<p><strong>关于oracle存储过程的若干问题备忘</strong></p>
+<h4 id="1-在oracle中，数据表别名不能加as，如："><a href="#1-在oracle中，数据表别名不能加as，如：" class="headerlink" title="1.在oracle中，数据表别名不能加as，如："></a>1.在oracle中，数据表别名不能加as，如：</h4><pre><code>select a.appname from appinfo a;-- 正确
+select a.appname from appinfo as a;-- 错误
+</code></pre><p>也许，是怕和oracle中的存储过程中的关键字as冲突的问题吧</p>
+<h4 id="2-在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。"><a href="#2-在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。" class="headerlink" title="2.在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。"></a>2.在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。</h4><pre><code>    select af.keynode into kn from APPFOUNDATION af 
+       where af.appid=aid and af.foundationid=fid;-- 有into，正确编译
+    select af.keynode from APPFOUNDATION af 
+     where af.appid=aid and af.foundationid=fid;-- 没有into，编译报错，提示：Compilation 
+
+    Error: PLS-00428: an INTO clause is expected in this SELECT statement
+</code></pre><h4 id="3-在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no-data-found”异常。"><a href="#3-在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no-data-found”异常。" class="headerlink" title="3.在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no data found”异常。"></a>3.在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no data found”异常。</h4><p>可以在该语法之前，先利用select count(*) from 查看数据库中是否存在该记录，如果存在，再利用select…into…</p>
+<h4 id="4-在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错"><a href="#4-在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错" class="headerlink" title="4.在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错"></a>4.在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错</h4><pre><code> --正确
+select keynode into kn from APPFOUNDATION where appid=aid and foundationid=fid;
+
+--错误
+select af.keynode into kn from APPFOUNDATION af 
+ where af.appid=appid and af.foundationid=foundationid;
+-- 运行阶段报错，提示ORA-01422:exact fetch returns more than requested number of rows
+</code></pre><h4 id="5-在存储过程中，关于出现null的问题"><a href="#5-在存储过程中，关于出现null的问题" class="headerlink" title="5.在存储过程中，关于出现null的问题"></a>5.在存储过程中，关于出现null的问题</h4><p>假设有一个表A，定义如下：</p>
+<pre><code>create table A(
+id varchar2(50) primary key not null,
+vcount number(8) not null,
+bid varchar2(50) not null -- 外键 
+);
+</code></pre><p>如果在存储过程中，使用如下语句：</p>
+<pre><code>select sum(vcount) into fcount from A where bid=&#39;xxxxxx&#39;;
+</code></pre><p>如果A表中不存在bid=”xxxxxx”的记录，则fcount=null(即使fcount定义时设置了默认值，如：fcount number(8):=0依然无效，fcount还是会变成null)，这样以后使用fcount时就可能有问题，所以在这里最好先判断一下：</p>
+<pre><code>if fcount is null then
+    fcount:=0;
+end if;
+</code></pre><p>这样就一切ok了。</p>
+<h4 id="6-Hibernate调用oracle存储过程"><a href="#6-Hibernate调用oracle存储过程" class="headerlink" title="6.Hibernate调用oracle存储过程"></a>6.Hibernate调用oracle存储过程</h4><pre><code>this.pnumberManager.getHibernateTemplate().execute(
+            new HibernateCallback() {
+                public Object doInHibernate(Session session)
+                        throws HibernateException, SQLException {
+                    CallableStatement cs = session
+                            .connection()
+                            .prepareCall(&quot;{call modifyapppnumber_remain(?)}&quot;);
+                    cs.setString(1, foundationid);
+                    cs.execute();
+                    return null;
+                }
+            });
+</code></pre>
       
     </div>
     
@@ -439,6 +653,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/PLSQL/" rel="tag"><i class="fa fa-tag"></i> PLSQL</a>
+          
+            <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
+          
+        </div>
+      
 
       
       
@@ -448,15 +670,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/05/02/PLSQL/" rel="next" title="PLSQL">
+                <i class="fa fa-chevron-left"></i> PLSQL
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/02/PLSQL/" rel="prev" title="PLSQL">
-                PLSQL <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程创建语法："><span class="nav-number">1.</span> <span class="nav-text">存储过程创建语法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项："><span class="nav-number">2.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已命名的异常"><span class="nav-number">3.</span> <span class="nav-text">已命名的异常:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">4.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基本结构"><span class="nav-number">4.1.</span> <span class="nav-text">1. 基本结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-SELECT-INTO-STATEMENT"><span class="nav-number">4.2.</span> <span class="nav-text">2. SELECT INTO STATEMENT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-IF-判断"><span class="nav-number">4.3.</span> <span class="nav-text">3. IF 判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-while-循环"><span class="nav-number">4.4.</span> <span class="nav-text">4. while 循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-变量赋值"><span class="nav-number">4.5.</span> <span class="nav-text">5. 变量赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-用for-in-使用cursor"><span class="nav-number">4.6.</span> <span class="nav-text">6. 用for in 使用cursor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-带参数的cursor"><span class="nav-number">4.7.</span> <span class="nav-text">7. 带参数的cursor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-用pl-sql-developer-debug"><span class="nav-number">4.8.</span> <span class="nav-text">8. 用pl/sql developer debug</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-在oracle中，数据表别名不能加as，如："><span class="nav-number">4.8.1.</span> <span class="nav-text">1.在oracle中，数据表别名不能加as，如：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。"><span class="nav-number">4.8.2.</span> <span class="nav-text">2.在存储过程中，select某一字段时，后面必须紧跟into，如果select整个记录，利用游标的话就另当别论了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no-data-found”异常。"><span class="nav-number">4.8.3.</span> <span class="nav-text">3.在利用select…into…语法时，必须先确保数据库中有该条记录，否则会报出”no data found”异常。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错"><span class="nav-number">4.8.4.</span> <span class="nav-text">4.在存储过程中，别名不能和字段名称相同，否则虽然编译可以通过，但在运行阶段会报错</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-在存储过程中，关于出现null的问题"><span class="nav-number">4.8.5.</span> <span class="nav-text">5.在存储过程中，关于出现null的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-Hibernate调用oracle存储过程"><span class="nav-number">4.8.6.</span> <span class="nav-text">6.Hibernate调用oracle存储过程</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
